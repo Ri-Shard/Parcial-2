@@ -77,7 +77,7 @@ export class RegistroComponent implements OnInit {
             if (!this.encontro) {
               const messageBox = this.modalService.open(AlertModalComponent);
               messageBox.componentInstance.title = 'Resultado Operación';
-              messageBox.componentInstance.message = 'Usted no se encuentra registrado en el sistema, por favor ingrese su nombre para registrarse';
+              messageBox.componentInstance.message = 'Usted no se encuentra registrado, por favor ingrese su nombre ';
               this._nombre = '';
               console.log(this.formGroup);
             }
