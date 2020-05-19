@@ -23,6 +23,8 @@
                             <div class="form-group ">
                                 <label>Nombre</label>
                                 <input type="text "   name="nombre "   formControlName="nombre" value="{{_nombre}}"  class="form-control " value="{{_nombre}}" [ngClass]="{  'is-invalid':  control.nombre.errors} "  />
+                                <small *ngIf="nombreNoValido" class="text-danger">Nombre requerido</small>
+
                                 </div>
                                 <hr/>
                                 <div>
@@ -31,28 +33,34 @@
                                 <div class="form-group ">
                                     <label>Codigo </label>
                                     <input type="text "   name="cod "   formControlName="codigo"  class="form-control " [ngClass]="{  'is-invalid':  control.codigo.errors} "  />
-                                    </div>
+                                    <div *ngIf="control.codigo.errors "  class="invalid-feedback ">
+                                        <div *ngIf="control.codigo.errors.required ">Se require el Codigo</div>
+                                            </div>
+                                            </div>
 
-                                    <div class="form-group">
-                                        <label>Ruta*</label>
-                                        <select (click)="asignarPrecio(idx.value)" name="ruta" class="custom-select custom-select-lg mb-3" formControlName="ruta" #idx>
+                                            <div class="form-group">
+                                                <label>Ruta*</label>
+                                                <select (click)="asignarPrecio(idx.value)" name="ruta" class="custom-select custom-select-lg mb-3" formControlName="ruta" #idx>
                                         <option selected disabled>Seleccione una opción</option>
                                         <option value="Valledupar - Bogotá">Valledupar - Bogotá</option>                                     
                                         <option value="Valledupar - Barranquilla">Valledupar - Barranquilla</option>            
                                         <option value="Valledupar - Santa Marta">Valledupar - Santa Marta</option>
                                         <option value="Valledupar - Cartagena">Valledupar - Cartagena</option>                                   
                                     </select>
-                                        <small *ngIf="rutaNoValida" class="text-danger">Ruta requerida</small>
-                                    </div>
-                                    <div class="form-group ">
-                                        <label>Valor</label>
-                                        <input type="text "   name="valor "   formControlName="valor" value="{{_valor}}"  class="form-control " readonly [ngClass]="{  'is-invalid':  control.valor.errors} "  />
-                                        </div>
-                                        <div class="mb-2 ">
-                                            <button class="btn btn-primary " (click)="onSubmit() "   [disabled]="formGroup.invalid ">Register</button>
-                                                <button class="btn btn-danger "  type="reset ">Cancel</button>
-                                        </div>
-                                        </form>
-                                        </div>
-                                        </div>
-                                        </div>
+                                                <small *ngIf="rutaNoValida" class="text-danger">Ruta requerida</small>
+                                            </div>
+                                            <div class="form-group ">
+                                                <label>Valor</label>
+                                                <input type="text "   name="valor "   formControlName="valor" value="{{_valor}}"  class="form-control " readonly [ngClass]="{  'is-invalid':  control.valor.errors} "  />
+                                                <div *ngIf="control.valor.errors "  class="invalid-feedback ">
+                                                    <div *ngIf="control.valor.errors.required ">Se require el Va,or</div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="mb-2 ">
+                                                            <button class="btn btn-primary " (click)="onSubmit() "   [disabled]="formGroup.invalid ">Comprar</button>
+                                                                <button class="btn btn-danger "  type="reset " [routerLink]="['/Home']">Cancel</button>
+                                                        </div>
+                                                        </form>
+                                                        </div>
+                                                        </div>
+                                                        </div>

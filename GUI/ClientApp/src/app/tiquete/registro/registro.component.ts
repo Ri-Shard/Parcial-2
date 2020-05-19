@@ -67,7 +67,9 @@ export class RegistroComponent implements OnInit {
               // tslint:disable-next-line: triple-equals
               if (index == element.idCliente) {
                 this._nombre = element.nombre;
-                console.log('si esta');
+                const messageBox = this.modalService.open(AlertModalComponent);
+                messageBox.componentInstance.title = 'Resultado Operación';
+                messageBox.componentInstance.message = 'Se encontro un pasajero registrado con la id ' + index;
                 this.encontro = true;
                 return;
               }
@@ -77,7 +79,7 @@ export class RegistroComponent implements OnInit {
             if (!this.encontro) {
               const messageBox = this.modalService.open(AlertModalComponent);
               messageBox.componentInstance.title = 'Resultado Operación';
-              messageBox.componentInstance.message = 'Usted no se encuentra registrado, por favor ingrese su nombre ';
+              messageBox.componentInstance.message = 'Usted no se encuentra registrado, por favor ingrese su nombre para registrarse';
               this._nombre = '';
               console.log(this.formGroup);
             }
@@ -114,5 +116,11 @@ export class RegistroComponent implements OnInit {
         this.tiquete = p;
       }
     });
+  }
+  get rutaNoValida() {
+    return this.formGroup.get('ruta').invalid && this.formGroup.get('ruta').touched;
+  }
+  get nombreNoValido() {
+    return this.formGroup.get('nombre').invalid && this.formGroup.get('nombre').touched;
   }
 }
