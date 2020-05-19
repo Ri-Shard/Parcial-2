@@ -1,0 +1,58 @@
+<div class="container">
+
+    <div class="row ">
+
+        <div class="col-md-6 offset-md-3">
+
+            <h2>Registro</h2>
+
+            <form [formGroup]="formGroup ">
+                <div>
+                    <h6>Informacion Pasajero</h6>
+                </div>
+                <div class="form-group ">
+                    <label>Identificacion</label>
+                    <input type="text "  id="idCliente"  name="idCliente"  #index formControlName="idCliente"  class="form-control " placeholder="Digite identificacion " [ngClass]="{  'is-invalid':  control.idCliente.errors} "  />
+                    <div *ngIf="control.idCliente.errors "  class="invalid-feedback ">
+                        <div *ngIf="control.idCliente.errors.required ">Se require la identificacion</div>
+                            </div>
+                            </div>
+                            <div class="input-group-prepend mb-2">
+                                <button class="btn btn-success "  type="reset " (click)="buscar(index.value)">Buscar</button>
+                            </div>
+                            <div class="form-group ">
+                                <label>Nombre</label>
+                                <input type="text "   name="nombre "   formControlName="nombre" value="{{_nombre}}"  class="form-control " value="{{_nombre}}" [ngClass]="{  'is-invalid':  control.nombre.errors} "  />
+                                </div>
+                                <hr/>
+                                <div>
+                                    <h6>Informacion Tiquete</h6>
+                                </div>
+                                <div class="form-group ">
+                                    <label>Codigo </label>
+                                    <input type="text "   name="cod "   formControlName="codigo"  class="form-control " [ngClass]="{  'is-invalid':  control.codigo.errors} "  />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Ruta*</label>
+                                        <select (click)="asignarPrecio(idx.value)" name="ruta" class="custom-select custom-select-lg mb-3" formControlName="ruta" #idx>
+                                        <option selected disabled>Seleccione una opción</option>
+                                        <option value="Valledupar - Bogotá">Valledupar - Bogotá</option>                                     
+                                        <option value="Valledupar - Barranquilla">Valledupar - Barranquilla</option>            
+                                        <option value="Valledupar - Santa Marta">Valledupar - Santa Marta</option>
+                                        <option value="Valledupar - Cartagena">Valledupar - Cartagena</option>                                   
+                                    </select>
+                                        <small *ngIf="rutaNoValida" class="text-danger">Ruta requerida</small>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label>Valor</label>
+                                        <input type="text "   name="valor "   formControlName="valor" value="{{_valor}}"  class="form-control " readonly [ngClass]="{  'is-invalid':  control.valor.errors} "  />
+                                        </div>
+                                        <div class="mb-2 ">
+                                            <button class="btn btn-primary " (click)="onSubmit() "   [disabled]="formGroup.invalid ">Register</button>
+                                                <button class="btn btn-danger "  type="reset ">Cancel</button>
+                                        </div>
+                                        </form>
+                                        </div>
+                                        </div>
+                                        </div>
