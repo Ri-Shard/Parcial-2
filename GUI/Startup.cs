@@ -87,6 +87,7 @@ namespace GUI
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");
+                 endpoints.MapHub<SignalHub>("/signalHub");
             });
 //start swagger
             app.UseSwagger();
@@ -106,9 +107,6 @@ namespace GUI
                 {
                     spa.UseAngularCliServer(npmScript: "start");
                 }
-            });
-            app.UseEndpoints(endpoints =>{
-                endpoints.MapHub<SignalHub>("/signalHub");
             });
         }
     }

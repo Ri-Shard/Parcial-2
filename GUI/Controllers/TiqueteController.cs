@@ -25,7 +25,7 @@ namespace GUI.Controllers
       
         public TiqueteController(TiqueteContext context,IHubContext<SignalHub> hubContext)
         {
-                    _hubContext = hubContext;
+             _hubContext = hubContext;
 
              _tiqueteService = new TiqueteService(context);
         }
@@ -53,7 +53,7 @@ namespace GUI.Controllers
             }
             var tiqueteViewModel = new TiqueteViewModel(response.Tiquete);
             await _hubContext.Clients.All.SendAsync("TiqueteRegistrado", tiqueteViewModel);
-            return Ok(response.Tiquete);
+            return Ok(tiqueteViewModel);
         }
         private Tiquete MapearTiquete(TiqueteInputModel tiqueteInput)
         {
