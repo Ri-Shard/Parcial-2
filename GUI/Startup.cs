@@ -7,8 +7,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System;
-using Datos;
-using Microsoft.EntityFrameworkCore;
+using Datos;
+using Microsoft.EntityFrameworkCore;
+using GUI.Hubs;
 
 namespace GUI
 {
@@ -24,26 +25,24 @@ namespace GUI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-                     // Configurar cadena de Conexion con EF
-            var connectionString=Configuration.GetConnectionString("DefaultConnection");
-            services.AddDbContext<TiqueteContext>(p=>p.UseSqlServer(connectionString));
+            // Configurar cadena de Conexion con EF
+            var connectionString=Configuration.GetConnectionString("DefaultConnection");
+            services.AddDbContext<TiqueteContext>(p=>p.UseSqlServer(connectionString));
 
             services.AddControllersWithViews();
-                        //Agregar OpenApi Swagger
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "Parcial2",
-                    Description = "Parcial 2 ",
+                    Title = "Parcial_1 API",
+                    Description = "Parcial_1 API - ASP.NET Core Web API",
                     TermsOfService = new Uri("https://cla.dotnetfoundation.org/"),
                     Contact = new OpenApiContact
                     {
-                        Name = "Unicesar",
-                        Email = string.Empty,
-                        Url = new Uri("https://github.com/borisgr04/CrudNgDotNetCore3"),
+                        Name = "Ricardo Diaz",
+                        Email = "rikelpa2001@gmail.com",
+                        Url = new Uri("https://github.com/Ri-Shard/"),
                     },
                     License = new OpenApiLicense
                     {
@@ -52,8 +51,7 @@ namespace GUI
                     }
                 });
             });
-
-            services.AddControllersWithViews();
+            services.AddSignalR();
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
@@ -90,14 +88,13 @@ namespace GUI
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");
             });
-            //start swagger
+//start swagger
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
             });
             //end swagger
-
             app.UseSpa(spa =>
             {
                 // To learn more about options for serving an Angular SPA from ASP.NET Core,
@@ -109,6 +106,9 @@ namespace GUI
                 {
                     spa.UseAngularCliServer(npmScript: "start");
                 }
+            });
+            app.UseEndpoints(endpoints =>{
+                endpoints.MapHub<SignalHub>("/signalHub");
             });
         }
     }

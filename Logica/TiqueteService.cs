@@ -1,20 +1,18 @@
-﻿using Datos;
-using Entity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Datos;
+using Entity;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
-namespace Logica
+namespace Logica
 {
-    public class TiqueteService
-    {
-        private readonly TiqueteContext _context;
-      
-        public TiqueteService(TiqueteContext context)
-        {
-            _context=context;
-        }
-
+    public class TiqueteService
+    {
+        private readonly TiqueteContext _context;
+        public TiqueteService(TiqueteContext context)
+        {
+            _context=context;
+        }
         public GuardarTiqueteResponse Guardar(Tiquete tiquete)
         {
             try
@@ -32,13 +30,13 @@ namespace Logica
                 return new GuardarTiqueteResponse($"Error de la Aplicacion: {e.Message}");
             }
         }
-
-                public List<Tiquete> ConsultarTodos()
+        public List<Tiquete> ConsultarTodos()
         {
             List<Tiquete> tiquetes = _context.Tiquetes.ToList();
             return tiquetes;
         }
-         public class GuardarTiqueteResponse 
+    }
+    public class GuardarTiqueteResponse 
     {
         public GuardarTiqueteResponse(Tiquete tiquete)
         {
@@ -54,8 +52,4 @@ namespace Logica
         public string Mensaje { get; set; }
         public Tiquete Tiquete { get; set; }
     }
-    }
-   
 }
-
-

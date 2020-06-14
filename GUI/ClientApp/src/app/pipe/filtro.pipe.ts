@@ -12,6 +12,4 @@ export class FiltroPipe implements PipeTransform {
    p.nombre.toLowerCase()
   .indexOf(searchText.toLowerCase()) !== -1);
     }
-
-
 }

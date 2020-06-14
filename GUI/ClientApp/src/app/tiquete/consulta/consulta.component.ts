@@ -12,6 +12,7 @@ import { TiqueteService } from 'src/app/services/tiquete.service';
 export class ConsultaComponent implements OnInit {
 
   tiquetes: Tiquete[];
+  searchText: string;
   constructor(private tiqueteService: TiqueteService) { }
 
   ngOnInit() {
