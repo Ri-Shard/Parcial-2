@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import {JwtInterceptor} from './services/jwt.interceptor';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -17,6 +18,7 @@ import { PersonaService } from './services/persona.service';
 import { FiltroPipe } from './pipe/filtro.pipe';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AlertModalComponent } from './@base/alert-modal/alert-modal.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { AlertModalComponent } from './@base/alert-modal/alert-modal.component';
     ConsultaComponent,
     RegistroComponent,
     FiltroPipe,
-    AlertModalComponent
+    AlertModalComponent,
+    LoginComponent
   ],
   imports: [
     ReactiveFormsModule,
@@ -44,7 +47,7 @@ import { AlertModalComponent } from './@base/alert-modal/alert-modal.component';
     AppRoutingModule
   ],
   entryComponents: [AlertModalComponent],
-  providers: [PersonaService, TiqueteService],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

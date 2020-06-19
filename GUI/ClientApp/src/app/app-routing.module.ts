@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import {ConsultaComponent} from './tiquete/consulta/consulta.component';
 import {RegistroComponent} from './tiquete/registro/registro.component';
 import {Routes,RouterModule}from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
     {
@@ -11,8 +13,9 @@ const routes: Routes = [
     },
     {
       path: 'Registro',
-      component:RegistroComponent
-    }
+      component:RegistroComponent,canActivate: [AuthGuard]
+    },
+  { path: 'login', component: LoginComponent },
   ];
   
 @NgModule({
