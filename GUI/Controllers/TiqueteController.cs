@@ -5,6 +5,7 @@ using Entity;
 using Logica;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Configuration;
 using GUI.Models;
 using System.ComponentModel.DataAnnotations;
@@ -15,6 +16,7 @@ using Microsoft.AspNetCore.SignalR;
 
 namespace GUI.Controllers
 {
+    [Authorize]    
     [Route("api/[controller]")]
     [ApiController]
     public class TiqueteController : ControllerBase

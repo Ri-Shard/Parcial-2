@@ -1,0 +1,13 @@
+C:\Users\rikar\Documents\BD\Parcial-2\Logica\bin\Release\netstandard2.1\Logica.deps.json
+C:\Users\rikar\Documents\BD\Parcial-2\Logica\bin\Release\netstandard2.1\Logica.dll
+C:\Users\rikar\Documents\BD\Parcial-2\Logica\bin\Release\netstandard2.1\Logica.pdb
+C:\Users\rikar\Documents\BD\Parcial-2\Logica\bin\Release\netstandard2.1\Datos.dll
+C:\Users\rikar\Documents\BD\Parcial-2\Logica\bin\Release\netstandard2.1\Entity.dll
+C:\Users\rikar\Documents\BD\Parcial-2\Logica\bin\Release\netstandard2.1\Datos.pdb
+C:\Users\rikar\Documents\BD\Parcial-2\Logica\bin\Release\netstandard2.1\Entity.pdb
+C:\Users\rikar\Documents\BD\Parcial-2\Logica\obj\Release\netstandard2.1\Logica.csprojAssemblyReference.cache
+C:\Users\rikar\Documents\BD\Parcial-2\Logica\obj\Release\netstandard2.1\Logica.AssemblyInfoInputs.cache
+C:\Users\rikar\Documents\BD\Parcial-2\Logica\obj\Release\netstandard2.1\Logica.AssemblyInfo.cs
+C:\Users\rikar\Documents\BD\Parcial-2\Logica\obj\Release\netstandard2.1\Logica.csproj.CopyComplete
+C:\Users\rikar\Documents\BD\Parcial-2\Logica\obj\Release\netstandard2.1\Logica.dll
+C:\Users\rikar\Documents\BD\Parcial-2\Logica\obj\Release\netstandard2.1\Logica.pdb

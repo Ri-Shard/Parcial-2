@@ -9,5 +9,6 @@ namespace Datos
         {
         }
         public DbSet<Tiquete> Tiquetes { get; set; }
+        public DbSet<User> Users { get; set; }
 	}
 }

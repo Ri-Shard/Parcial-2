@@ -6,3 +6,11 @@ C:\Users\rikar\Documents\WEB\Parcial2\Entity\obj\Debug\netstandard2.1\Entity.Ass
 C:\Users\rikar\Documents\WEB\Parcial2\Entity\obj\Debug\netstandard2.1\Entity.dll
 C:\Users\rikar\Documents\WEB\Parcial2\Entity\obj\Debug\netstandard2.1\Entity.pdb
 C:\Users\rikar\Documents\WEB\Parcial2\Entity\obj\Debug\netstandard2.1\Entity.csprojAssemblyReference.cache
+C:\Users\rikar\Documents\BD\Parcial-2\Entity\bin\Debug\netstandard2.1\Entity.deps.json
+C:\Users\rikar\Documents\BD\Parcial-2\Entity\bin\Debug\netstandard2.1\Entity.dll
+C:\Users\rikar\Documents\BD\Parcial-2\Entity\bin\Debug\netstandard2.1\Entity.pdb
+C:\Users\rikar\Documents\BD\Parcial-2\Entity\obj\Debug\netstandard2.1\Entity.csprojAssemblyReference.cache
+C:\Users\rikar\Documents\BD\Parcial-2\Entity\obj\Debug\netstandard2.1\Entity.AssemblyInfoInputs.cache
+C:\Users\rikar\Documents\BD\Parcial-2\Entity\obj\Debug\netstandard2.1\Entity.AssemblyInfo.cs
+C:\Users\rikar\Documents\BD\Parcial-2\Entity\obj\Debug\netstandard2.1\Entity.dll
+C:\Users\rikar\Documents\BD\Parcial-2\Entity\obj\Debug\netstandard2.1\Entity.pdb

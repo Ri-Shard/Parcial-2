@@ -9,3 +9,14 @@ C:\Users\rikar\Documents\WEB\Parcial2\Datos\obj\Debug\netstandard2.1\Datos.Assem
 C:\Users\rikar\Documents\WEB\Parcial2\Datos\obj\Debug\netstandard2.1\Datos.csproj.CopyComplete
 C:\Users\rikar\Documents\WEB\Parcial2\Datos\obj\Debug\netstandard2.1\Datos.dll
 C:\Users\rikar\Documents\WEB\Parcial2\Datos\obj\Debug\netstandard2.1\Datos.pdb
+C:\Users\rikar\Documents\BD\Parcial-2\Datos\bin\Debug\netstandard2.1\Datos.deps.json
+C:\Users\rikar\Documents\BD\Parcial-2\Datos\bin\Debug\netstandard2.1\Datos.dll
+C:\Users\rikar\Documents\BD\Parcial-2\Datos\bin\Debug\netstandard2.1\Datos.pdb
+C:\Users\rikar\Documents\BD\Parcial-2\Datos\bin\Debug\netstandard2.1\Entity.dll
+C:\Users\rikar\Documents\BD\Parcial-2\Datos\bin\Debug\netstandard2.1\Entity.pdb
+C:\Users\rikar\Documents\BD\Parcial-2\Datos\obj\Debug\netstandard2.1\Datos.csprojAssemblyReference.cache
+C:\Users\rikar\Documents\BD\Parcial-2\Datos\obj\Debug\netstandard2.1\Datos.AssemblyInfoInputs.cache
+C:\Users\rikar\Documents\BD\Parcial-2\Datos\obj\Debug\netstandard2.1\Datos.AssemblyInfo.cs
+C:\Users\rikar\Documents\BD\Parcial-2\Datos\obj\Debug\netstandard2.1\Datos.csproj.CopyComplete
+C:\Users\rikar\Documents\BD\Parcial-2\Datos\obj\Debug\netstandard2.1\Datos.dll
+C:\Users\rikar\Documents\BD\Parcial-2\Datos\obj\Debug\netstandard2.1\Datos.pdb
