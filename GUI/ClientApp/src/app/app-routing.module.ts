@@ -9,7 +9,7 @@ import { AuthGuard } from './services/auth.guard';
 const routes: Routes = [
     {
     path: 'Consulta',
-    component:ConsultaComponent
+    component:ConsultaComponent,canActivate: [AuthGuard]
     },
     {
       path: 'Registro',
